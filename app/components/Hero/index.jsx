@@ -21,9 +21,9 @@ function Hero(props) {
 
                         <div className="max-w-md">
                             <h1 className={'${bebasNeue.style} mb-5 text-4xl'}> PTGA</h1>
-                            <h1 className={'${montserrat.style} text-sm'}>
+                            <h2 className={'${montserrat.style} text-sm'}>
                                 Producción Tecnológica, Gráfica y Audiovisual LTDA
-                            </h1>
+                            </h2>
                         </div>
                     </div>
                 </div>
