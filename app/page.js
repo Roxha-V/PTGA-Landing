@@ -13,7 +13,7 @@ export default function Home({ Component, Props }) {
     <main>
 
       <appFonts Component={Component} Props={Props}>
-        <NavBar />
+        {/* <NavBar /> */}
         <Hero />
 
       </appFonts>

@@ -2,7 +2,8 @@
 
 import React from 'react';
 import Banner from './banner-ptga.jpg';
-import { montserrat } from '../Fonts/appFonts';
+import bebasNeue from '../Fonts/appFonts';
+import { montserrat } from "../Fonts/appFonts";
 
 
 function Hero(props) {
@@ -11,35 +12,18 @@ function Hero(props) {
 
     return (
         <>
-
-            <div className='hero min-h-screen'>
-                <div className='hero-content'>
-                    <img src={Banner.src} alt="banner-ptga" />
-                </div>
-                <div className='hero-overlay bg-opacity-20 '>
-                    <div className='hero-content text-center absolute w-full h-full text-white-50'>
-
-                        <div className="max-w-md">
-                            <h1 className={'${bebasNeue.style} mb-5 text-4xl'}> PTGA</h1>
-                            <h2 className={'${montserrat.style} text-sm'}>
+            <div className="hero min-h-screen">
+                <div className="hero relative overflow-hidden bg-cover bg-no-repeat bg-[50%] h-[500px]" style={{ backgroundImage: `url(${Banner.src})` }}>
+                    <div className="hero-content text-center">
+                        <div className="max-w-max">
+                            <h1 className={'${bebasNeue .style} px-8 mb-5 text-center text-white text-9xl tracking-[.25em] relative z-10 drop-shadow'}> PTGA</h1>
+                            <h2 className={'${montserrat.style} leading-loose mb-5 text-center text-white text-6xl relative z-10 drop-shadow'}>
                                 Producción Tecnológica, Gráfica y Audiovisual LTDA
                             </h2>
                         </div>
                     </div>
                 </div>
-                <div className="w-96 h-96 object-cover">
-
-                </div>
-            </div >
-
-
-
-
-
-
-
-
-
+            </div>
 
         </>
 
