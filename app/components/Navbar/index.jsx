@@ -3,7 +3,6 @@ import React from 'react';
 import logo from './ptgaLogo.png';
 import { useEffect, useState } from 'react';
 
-
 function NavBar(props) {
 
     const [scrollArriba, setscrollArriba] = useState(0); //valor incial de vriable de estado (?)
@@ -13,22 +12,23 @@ function NavBar(props) {
             setscrollArriba(window.scrollY);
         };
 
-        window.addEventListener('onScroll', handleScroll);
+        window.addEventListener('scroll', handleScroll);
 
 
         //se define una function que va a cambiar con el estado de scrollArriba
 
 
-        return () => {
-            window.removeEventListener('onScroll', handleScroll);
-        };
+        //     return () => {
+        //         window.removeEventListener('scroll', handleScroll);
+        //         console.log("se esta haciendo scroll")
+        //     };
     });
 
 
     return (
 
         <div className={scrollArriba > 0 ? "solid-navbar" : "logo-navbar"}>
-            <div className='navbar-start size-24'>
+            <div className='navbar-end size-24'>
                 <img src={logo.src} alt="banner-ptga" />
             </div>
 
@@ -52,4 +52,4 @@ function NavBar(props) {
     );
 }
 
-export default NavBar;
+export default NavBar

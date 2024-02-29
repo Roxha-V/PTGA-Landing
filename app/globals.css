@@ -10,7 +10,8 @@
 }
 
 .logo-navbar {
-  background-image: url("app/components/Navbar/ptgaLogo.png");
+  background-color: rgb(57, 0, 155);
+
   width: 100%;
   height: auto;
   position: fixed;
@@ -20,7 +21,7 @@
 }
 
 .solid-navbar {
-  background-color: blueviolet;
+  background-color: rgba(137, 43, 226, 0.341);
   width: 100%;
   position: fixed;
   top: 0;

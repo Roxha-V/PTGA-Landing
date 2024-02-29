@@ -1,4 +1,4 @@
-'use client'
+
 import { Bebas_Neue, Montserrat } from 'next/font/google';
 
 
@@ -11,15 +11,16 @@ export const montserrat = Montserrat({ subsets: ['latin'] })
 
 function appFonts({ Component, Props }) {  //dos props  - 
 
+    console.log('cheuqedo que funciona', appFonts)
+
     return (
-        <>
+
+        <div>
             <style jsx> {
-                'font-family: ${bebasNeue.name}, ${montserrat.name};}'}
+                `font-family: ${bebasNeue.name}, ${montserrat.name};}`}
             </style>
 
-        </>
+        </div>
     )
-}
 
-export default appFonts;
-console.log('cheuqedo que funciona', appFonts)
+}
