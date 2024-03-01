@@ -57,6 +57,6 @@ function Hero() {
     );
 }
 
-const objetoImagen = {}
+// const objetoImagen = {} hace falta esto , me pierdo (?)
 
 export default Hero;
