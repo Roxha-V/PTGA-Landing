@@ -28,12 +28,12 @@ function NavBar(props) {
     return (
 
         <div className={scrollArriba > 0 ? "solid-navbar" : "logo-navbar"}>
-            <div className='navbar-end size-24'>
+            <div className='navbar-end size-24 top-0'>
                 <img src={logo.src} alt="banner-ptga" />
             </div>
 
             <div className="navbar-center mx-6 items-center justify-between ">
-                <ul className=" menu menu-vertical lg:menu-horizontal rounded-box glass ">
+                <ul className="montserrat menu menu-vertical lg:menu-horizontal rounded-box glass ">
                     <li className="text-white text-2xl"><a href="#">Sobre PTGA</a></li>
                     <li className="text-white text-2xl"><a href="#">Servicios</a></li>
                     <li className="text-white text-2xl"><a href="#">Clientes</a></li>

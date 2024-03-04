@@ -14,17 +14,18 @@ import { bebasNeue, montserrat } from "./components/Fonts/appFonts";
 export default function Home({ }) {
   return (
     <main>
-      <style jsx global>{`
+      {/* <style jsx global>{`
         body {
           font-family: ${bebasNeue.name}, ${montserrat.name};
-          height: 1200px;
-        }
-      `}</style>
+                  }
+                `}</style> porque no me funciona?*/}
 
-      <NavBar />
+
       <Hero />
+      <NavBar />
+      {/* <ClientCarousel /> */}
 
-      <ClientCarousel />
+
 
     </main>
   );
