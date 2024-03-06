@@ -1,7 +1,9 @@
-import Image from "next/image";
+import ClientsCarousel from "./clientsCarousel-component"
 
-export default function Home() {
+export default
+  function Home() {
   return (
-    <div>holaaaaaa</div>
-  );
-}
+
+    <ClientsCarousel />
+  )
+};
