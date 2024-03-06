@@ -1,7 +1,9 @@
-import Image from "next/image";
+import DobleBanner from "./doble-banner-component";
 
 export default function Home() {
   return (
-    <div>holaaaaaa</div>
+    <div>
+      <DobleBanner />
+    </div>
   );
 }
