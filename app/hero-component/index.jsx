@@ -26,7 +26,7 @@ function HeroComponent() {
                 </div>
                 <div className="h-screen relative block w-full py-10 bg-cyan-900">
                     <h1 className=" font-sans p-10 mb-2 text-5xl uppercase leading-8 tracking-widest font-bold text-center text-white">Sobre PTGA</h1>
-                    <p className=" font-sans px-40 text-2xl uppercase text-center block mt-4 tracking-wider text-white">Lorem ipsum dolor sit amet. Et quibusdam optio ea facere suscipit in ducimus dolorum ut commodi dolorum est doloribus magni et dolorem corporis? Ex error praesentium qui voluptatem dolorem et eaque culpa et perferendis totam est voluptas alias est inventore molestiae ex accusantium sint. Et praesentium velit et quos dolores ut voluptas voluptas ut omnis perferendis.
+                    <p className="object-contain font-sans px-40 text-[1.4rem] leading-[2.3rem] uppercase text-center block mt-4 tracking-wider text-white justify-self-center ">Lorem ipsum dolor sit amet. Et quibusdam optio ea facere suscipit in ducimus dolorum ut commodi dolorum est doloribus magni et dolorem corporis? Ex error praesentium qui voluptatem dolorem et eaque culpa et perferendis totam est voluptas alias est inventore molestiae ex accusantium sint. Et praesentium velit et quos dolores ut voluptas voluptas ut omnis perferendis.
 
                         Qui atque quod aut inventore obcaecati cum corporis voluptatem in neque iste. Vel excepturi natus qui quia molestiae id iure asperiores ut libero sunt quo atque quibusdam sed dolores mollitia. Et aliquam quisquam aut distinctio internos aut porro rerum qui porro placeat. Et doloremque autem aut inventore mollitia ut itaque repellat.
 
