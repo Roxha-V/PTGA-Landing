@@ -1,7 +1,7 @@
-import Image from "next/image";
+import Servicios from "./servicios-component";
 
 export default function Home() {
   return (
-    <div>holaaaaaa</div>
-  );
-}
+    <Servicios />
+  )
+};
