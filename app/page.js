@@ -1,7 +1,10 @@
-import Image from "next/image";
 
 export default function Home() {
   return (
-    <div></div>
+    <main className="min-h-screen justify-between">
+      < div >
+
+      </div >
+    </main >
   );
 }
