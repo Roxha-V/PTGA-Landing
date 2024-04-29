@@ -15,7 +15,8 @@ module.exports = {
       fontFamily: {
         'cerapro': ['CeraPro', 'sans-serif'],
         'montserrat': ['Montserrat', 'sans-serif'],
-      }
+      },
+
     },
   },
   plugins: [require("daisyui")],

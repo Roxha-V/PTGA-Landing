@@ -4,10 +4,10 @@ import React from "react";
 
 
 const navbarItems = [
-  { "id": "sobre-ptga", "key": "Sobre PTGA" },
-  { "id": "servicios", "key": "Servicios" },
-  { "id": "clientes", "key": "Clientes" },
-  { "id": "contacto", "key": "Contacto" },
+  { "id": "about-us-section", "key": "Sobre PTGA" },
+  { "id": "services", "key": "Servicios" },
+  { "id": "clients", "key": "Clientes" },
+  { "id": "contact", "key": "Contacto" },
 
 ];
 
@@ -18,6 +18,18 @@ const navbarItems = [
 
 
 function NavbarComponent() {
+
+  const scrollToSection = (id) => {
+    const idFollow = document.getElementById(id);
+    if (idFollow) {
+      idFollow.scrollIntoView({ behavior: 'smooth' });
+    }
+    else {
+      console.log('no se encontro', id, 'en el document')
+    }
+  }
+
+  //función scrollToSection dentro del componente - función de flecha que acepta un parámetro id (id del elemento a donde se quiere ir)
 
   return (
     <div className="drawer drawer-end">
@@ -54,11 +66,14 @@ function NavbarComponent() {
 
           <div className="flex-none hidden lg:block">
             <ul className="menu menu-horizontal">
-              {navbarItems.map((item, index) => {
+              {navbarItems.map((item, id) => {
 
                 return (
-                  <li key={index} className="navbar-item p-4">
-                    <a className="text-white text-xl" href={`#${item.id}`}>{item.key}</a>
+                  <li key={item.id} className="navbar-item p-4">
+                    <a className="sections text-white text-xl"
+                      onClick={() => scrollToSection(item.id)}
+                    >{item.key}</a>
+
                   </li>
                 );
 
@@ -80,8 +95,10 @@ function NavbarComponent() {
         <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
           {navbarItems.map((item, index) => {
             return (
-              <li key={index} className="navbar-item p-4">
-                <a className="border-2 hover:border-indigo-800" href={`#${item.id}`} >{item.key}</a>
+              <li key={item.id} className="navbar-item p-4">
+                <a className="border-2 hover:border-indigo-800"
+                  onClick={(e) => scrollToSection(item.id)}>{item.key}
+                </a>
               </li>
             );
 
