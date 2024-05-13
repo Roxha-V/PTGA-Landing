@@ -90,7 +90,7 @@ function NavbarComponent() {
 
 
 
-      <div className="drawer-side">  {/* aca arranca la parte del drawer que se muestra en mobile y pantallas chicas ocultando lo anterior */}
+      <div className="drawer-side z-40">  {/* aca arranca la parte del drawer que se muestra en mobile y pantallas chicas ocultando lo anterior */}
         <label htmlFor="my-drawer-3" aria-label="close sidebar" className="drawer-overlay bg-base-100 rounded-t-none"></label>
         <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
           {navbarItems.map((item, index) => {

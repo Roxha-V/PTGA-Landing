@@ -26,19 +26,28 @@ const montserrat = Montserrat({
 // });
 
 function HeroComponent() {
-  const bannersArreglo = ["./img/bannerhero1.jpg", "./img/bannerhero2.jpg", "./img/bannerhero3.jpg", "./img/bannerhero4.jpg"]; //aca se podria pasar una api (?) - preguntar walter
+  const bannersArreglo = [
+    "./img/bannerhero1.jpg",
+    "./img/bannerhero2.jpg",
+    "./img/bannerhero3.jpg",
+    "./img/bannerhero4.jpg",
+  ]; //aca se podria pasar una api (?) - preguntar walter
 
   const arreglo = bannersArreglo.length;
 
   const [botonActivo, setBotonActivo] = useState(0);
 
   const botonAnterior = () => {
-    setBotonActivo((bannerActual) => (bannerActual === 0 ? arreglo - 1 : bannerActual - 1));
+    setBotonActivo((bannerActual) =>
+      bannerActual === 0 ? arreglo - 1 : bannerActual - 1
+    );
     // aca la funcion determina una condicion donde si banner actual es igual a 0 , entonces
   };
 
   const botonSiguiente = () => {
-    setBotonActivo((bannerActual) => (bannerActual === arreglo - 1 ? 0 : bannerActual + 1));
+    setBotonActivo((bannerActual) =>
+      bannerActual === arreglo - 1 ? 0 : bannerActual + 1
+    );
     //aca esta mas dificil, lo que se busca es ver si la posicion actual del banner es *el ultimo del arreglo*
     // si esto es asi al banner al que pasa es al primer elemto del arreglo (osea indice 0) [bannerActual === arreglo - 1 ? 0 ]
     // En cambio si la posicion actual del banner no es igual al indice 0 lo que hace es que se le sume una posicion para ir al siguiente banner con el indice incrementado
@@ -56,8 +65,16 @@ function HeroComponent() {
   y lo que resuelve es que exista un boton por indice que si dicho index coincide con el indice de la imagen del banner el button se vuelva blanco y si no coinciden que se vuelva gris */}
         <div className="z-0 relative h-56 overflow-hidden md:h-96 bg-indigo-600">
           {bannersArreglo.map((img, indice) => (
-            <div key={indice} className={`carousel-item ${botonActivo === indice ? "" : "hidden"}`}>
-              <img src={img} className="absolute block w-full h-full object-fit bg-blend-multiply bg-no-repeat" />
+            <div
+              key={indice}
+              className={`carousel-item ${
+                botonActivo === indice ? "" : "hidden"
+              }`}
+            >
+              <img
+                src={img}
+                className="absolute block w-full h-full object-fit bg-blend-multiply bg-no-repeat"
+              />
             </div>
           ))}
 
@@ -86,7 +103,9 @@ function HeroComponent() {
               <button
                 key={index}
                 type="button"
-                className={`w-3 h-3 rounded-full ${botonActivo === index ? "bg-white" : "bg-gray-300"}`}
+                className={`w-3 h-3 rounded-full ${
+                  botonActivo === index ? "bg-white" : "bg-gray-300"
+                }`}
                 onClick={() => {
                   setBotonActivo(index);
                 }}
@@ -102,19 +121,35 @@ La sintaxis de la función que se pasa a map() es (element, index) => , donde el
 Por lo tanto, {bannersArreglo.map((_, index) => significa que para cada elemento en bannersArreglo, se genera un botón utilizando el índice de ese elemento.*/}
           </div>
 
-          <button className="z-20 btn-gosth absolute h-full px-4 cursor-pointer  focus:outline-none " onClick={botonAnterior}>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-10 h-10 hover:fill-white">
+          <button
+            className="z-20 btn-gosth absolute h-full px-4 cursor-pointer  focus:outline-none "
+            onClick={botonAnterior}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              className="w-10 h-10 hover:fill-white"
+            >
               <path
                 className="hover:shadow-lg"
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 d="M11.78 5.22a.75.75 0 0 1 0 1.06L8.06 10l3.72 3.72a.75.75 0 1 1-1.06 1.06l-4.25-4.25a.75.75 0 0 1 0-1.06l4.25-4.25a.75.75 0 0 1 1.06 0Z"
-                clip-rule="evenodd"
+                clipRule="evenodd"
               />
             </svg>
           </button>
 
-          <button className="z-20 btn-gosth absolute h-full px-4 cursor-pointer end-0 focus:outline-none " onClick={botonSiguiente}>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-10 h-10 hover:fill-white">
+          <button
+            className="z-20 btn-gosth absolute h-full px-4 cursor-pointer end-0 focus:outline-none "
+            onClick={botonSiguiente}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              className="w-10 h-10 hover:fill-white"
+            >
               <path
                 className="hover:shadow-lg"
                 fillRule="evenodd"
