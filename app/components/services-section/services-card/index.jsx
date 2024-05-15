@@ -1,7 +1,7 @@
 'use client'
 
 import { icon } from '@fortawesome/fontawesome-svg-core';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 
 function Card({ id, title, img, bgColor, service_detail }) {
@@ -18,12 +18,52 @@ function Card({ id, title, img, bgColor, service_detail }) {
     // mientras que si se usa el operador ! este estado cambia, osea es el opuesto
 
 
+
+    useEffect(() => {
+
+        const touchCard = document.getElementById("touch-card");
+        const cardSpan = document.getElementById("card-span")
+        const cardP = document.getElementById("card-parag")
+        const cardTitle = document.getElementById("card-title")
+
+
+        const touchStart = () => {
+            if (touchCard) {
+                touchCard.classList.add("hover:-translate-y-1 hover:shadow-2xl");
+                cardSpan.classList.add("group-hover:scale-[15]")
+                cardP.classList.add("group-hover:text-white/90")
+                cardTitle.classList.add("group-hover:text-white/90")
+
+            }
+        };
+
+        const touchEnd = () => {
+            if (touchCard) {
+                touchCard.classList.remove("hover:-translate-y-1 hover:shadow-2xl");
+                cardSpan.classList.remove("group-hover:scale-[15]")
+                cardP.classList.remove("group-hover:text-white/90")
+                cardTitle.classList.remove("group-hover:text-white/90")
+            }
+        };
+
+        if (touchCard) {
+            touchCard.addEventListener('touchstart', touchStart);
+            touchCard.addEventListener('touchend', touchEnd);
+
+            return () => {
+                touchCard.removeEventListener('touchstart', touchStart);
+                touchCard.removeEventListener('touchend', touchEnd);
+            };
+        }
+    }, []); // Se ejecuta solo una vez después de que el componente se monta
+
+
+
     return (
 
 
-
-        <div className="group relative cursor-pointer overflow-hidden bg-white pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto rounded-lg  px-6 sm:px-10">
-            <span className="absolute top-10 z-0 h-20 w-20 rounded-full transition-all duration-300 group-hover:scale-[15]" style={{ backgroundColor: bgColor }}></span>
+        <div id="touch-card" className="group relative cursor-pointer overflow-hidden bg-white pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto rounded-lg  px-6 sm:px-10">
+            <span id="card-span" className="absolute top-10 z-0 h-20 w-20 rounded-full transition-all duration-300 group-hover:scale-[15] " style={{ backgroundColor: bgColor }}></span>
             <div className="relative z-10 mx-auto max-w-md">
                 <span className="grid h-20 w-20 place-items-center rounded-full transition-all duration-200 group-hover:bg-[var(--hover)] "
                     style={{
@@ -35,13 +75,12 @@ function Card({ id, title, img, bgColor, service_detail }) {
                 </span>
                 <div className="pt-5 text-base font-semibold leading-7">
                     <p>
-                        <a href="#" className={`text-${bgColor} transition-all duration-300 group-hover:text-white/90`}>{title}
+                        <a id="card-title" className={`text-${bgColor} transition-all duration-300 group-hover:text-white/90`}>{title}
                         </a>
 
                     </p>
                 </div>
-                <div
-                    className="space-y-6 pt-5 text-base leading-7 text-gray-600 transition-all duration-300 group-hover:text-white/90">
+                <div id="card-parag" className="space-y-6 pt-5 text-base leading-7 text-gray-600 transition-all duration-300  text-left text-balance pr-24 group-hover:text-white/90">
                     <p>{service_detail}</p>
                 </div>
 
