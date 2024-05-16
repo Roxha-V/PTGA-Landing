@@ -57,13 +57,13 @@ function HeroComponent() {
 
   return (
     <>
-      <div className="relative w-full">
+      <div className=" w-full h-svh">
         {" "}
         {/*contenedro */}
         {/* aca abajo es para ver o no los puntos que te guian con los buttons - logica: con un z index se posicionan los buttons con space reverse
   para que se estos tengan espacio (reverse ya que vuelve la ronda de btns con la funcionalidad) // se recorre el array de imagenes por indice
   y lo que resuelve es que exista un boton por indice que si dicho index coincide con el indice de la imagen del banner el button se vuelva blanco y si no coinciden que se vuelva gris */}
-        <div className="z-0 relative h-56 overflow-hidden md:h-96 bg-indigo-600">
+        <div className="z-0   h-svh overflow-hidden md:h-[45rem] bg-indigo-600">
           {bannersArreglo.map((img, indice) => (
             <div
               key={indice}

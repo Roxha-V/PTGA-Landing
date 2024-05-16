@@ -84,7 +84,7 @@ function Card({ id, title, img, bgColor, service_detail }) {
         </div>
         <div
           id="card-parag"
-          className="space-y-6 pt-5 text-base leading-7 text-gray-600 transition-all duration-300  text-left text-balance pr-24 group-hover:text-white/90"
+          className="space-y-6 pt-5 text-base leading-7 text-gray-600 transition-all duration-300  text-left text-balance pr-5 group-hover:text-white/90"
         >
           <p>{service_detail}</p>
         </div>

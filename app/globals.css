@@ -63,4 +63,5 @@ body {
 
 :root {
   --hover: bgColor;
+  scroll-behavior: smooth !important;
 }

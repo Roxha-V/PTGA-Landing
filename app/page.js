@@ -8,8 +8,8 @@ export default function Home() {
   return (
     <>
       <HeroComponent />
-      <AboutUs />
       <Services />
+      <AboutUs />
       <FloatingBtn />
     </>
   );
