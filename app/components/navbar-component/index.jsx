@@ -1,13 +1,13 @@
-"use client";
+'use client';
 
-import React, { useEffect } from "react";
-import { useState } from "react";
+import React, { useEffect } from 'react';
+import { useState } from 'react';
 
 const navbarItems = [
-  { id: "about-us-section", key: "Sobre PTGA" },
-  { id: "services", key: "Servicios" },
-  { id: "clients", key: "Clientes" },
-  { id: "contact", key: "Contacto" },
+  { id: 'about-us-section', key: 'Sobre PTGA' },
+  { id: 'services', key: 'Servicios' },
+  { id: 'clients', key: 'Clientes' },
+  { id: 'contact', key: 'Contacto' },
 ];
 
 //se piensa tambien que el item tienda puede ser insumos - chequear -
@@ -19,9 +19,9 @@ function NavbarComponent() {
   const scrollToSection = (id) => {
     const idFollow = document.getElementById(id);
     if (idFollow) {
-      idFollow.scrollIntoView({ behavior: "smooth" });
+      idFollow.scrollIntoView({ behavior: 'smooth' });
     } else {
-      console.log("no se encontro", id, "en el document");
+      console.log('no se encontro', id, 'en el document');
     }
   };
 
@@ -80,7 +80,7 @@ function NavbarComponent() {
         {/* aca va el contenido de la pagina entera*/}
 
         <div className="drawer-side z-40">
-          {" "}
+          {' '}
           {/* aca arranca la parte del drawer que se muestra en mobile y pantallas chicas ocultando lo anterior */}
           <label
             htmlFor="my-drawer-3"
