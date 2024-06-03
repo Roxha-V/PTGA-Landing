@@ -24,7 +24,7 @@ const cardData = [
     ),
     bgColor: "#FEA700",
     service_detail:
-      "Instalación y mantenimiento de:-Torres de telecomunicaciones. -Equipos y enlaces en altura. -Equipos de estudio. -Transmisores",
+      "Instalación y mantenimiento de torres de telecomunicaciones, equipos y enlaces en altura, equipos de estudio y transmisores.",
     link: "",
   },
   {
@@ -59,7 +59,7 @@ const cardData = [
     img: "",
     bgColor: "#A30DFC",
     service_detail:
-      "Nuestros técnicos realizan las tareas de mantenimiento de punta a punta: desde los equipos del estudio hasta la baliza de la torre, garantizando el buen funcionamiento de tu planta transmisora, realizando tareas como:  Cambio de antenas y enlaces. Mantenimiento de torres. Asesoría para la compra equipos de estudio y planta transmisora.    ",
+      "Nuestros técnicos realizan las tareas de mantenimiento de punta a punta: desde los equipos del estudio hasta la baliza de la torre, garantizando el buen funcionamiento de tu planta transmisora, realizando tareas de cambio de antenas y enlaces., el mantenimiento de torres y asesorías para la compra equipos de estudio y plantas transmisoras.",
     link: "?",
   },
 
@@ -70,7 +70,7 @@ const cardData = [
     img: "",
     bgColor: "#ED0000",
     service_detail:
-      "Nuestra misión es asesorar, reformar, re acondicionar instalaciones energéticas con el enfoque en ahorro y efectividad en el uso que se le de en cada establecimiento. Analizamos las demandas y las necesidades del cliente a fin de realizar el proyecto y buscar las oportunidades de ahorro en las tarifas de electricidad y gas. Nos manejamos en las áreas domiciliarias, comerciales e industriales.",
+      "Nuestra misión es asesorar, reformar y reacondicionar instalaciones energéticas con el enfoque en ahorro y efectividad en el uso que se le de en cada establecimiento. Analizamos las demandas y las necesidades del cliente a fin de realizar el proyecto y buscar las oportunidades de ahorro en las tarifas de electricidad y gas. Nos manejamos en las áreas domiciliarias, comerciales e industriales.",
     link: "?",
   },
   //#5C0092 violeta oscuro
@@ -78,16 +78,14 @@ const cardData = [
 
 function ServiceSection(params) {
   return (
-    <div id="services">
-      <div className="w-full p-5">
-        <div
-          className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 mt-10 overflow-hidden bg-gray-100 p-10 sm:py-8 lg:p-10 2xl:p-30 
+    <div id="services" className="w-full p-4 bg-gray-100">
+      <div
+        className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 mt-10 overflow-hidden bg-gray-100 
              lg:flex-row gap-10 md:flex-col sm:flex-col"
-        >
-          {cardData.map((item) => (
-            <Card {...item} key={item.id} />
-          ))}
-        </div>
+      >
+        {cardData.map((item) => (
+          <Card {...item} key={item.id} />
+        ))}
       </div>
     </div>
   );
