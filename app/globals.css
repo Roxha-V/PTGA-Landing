@@ -31,34 +31,50 @@
 }
 
 body {
-  @layer utilities {
-    .text-balance {
-      text-wrap: balance;
-    }
-  }
+  background-image: linear-gradient(
+    to right top,
+    #3730a3,
+    #6254b6,
+    #877ac8,
+    #aaa0d9,
+    #cec8ea,
+    #d3cbf1,
+    #d9cef8,
+    #dfd1ff,
+    #ccadff,
+    #bc86ff,
+    #ae5aff,
+    #a30dfc
+  );
+}
 
-  *,
-  *::before,
-  *::after {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
   }
+}
 
-  .ceraProM {
-    font-family: "CeraProM", sans-serif;
-  }
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
-  .ceraProB {
-    font-family: "CeraProB", sans-serif;
-  }
+.ceraProM {
+  font-family: "CeraProM", sans-serif;
+}
 
-  .montserratM {
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-  }
+.ceraProB {
+  font-family: "CeraProB", sans-serif;
+}
+
+.montserratM {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 :root {
