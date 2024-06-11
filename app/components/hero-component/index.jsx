@@ -21,7 +21,7 @@ function HeroComponent() {
         <div className="hero-overlay bg-opacity-60"></div>
 
         <div className="hero-content text-neutral-content">
-          <div className=" w-9/12">
+          <div className="w-9/12">
             <h1 className=" box-content mb-5 text-center lg:text-left text-7xl font-bold">
               Producción Tecnológica, Gráfica <br />y Audiovisual LTDA
             </h1>
