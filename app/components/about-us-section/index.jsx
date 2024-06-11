@@ -38,7 +38,7 @@ function AboutUs() {
               <div
                 className="absolute bottom-0 left-0 w-full h-full bg-no-repeat"
                 style={{
-                  backgroundImage: "url('./img/torrre png.png') ",
+                  backgroundImage: "url(public/torrre png.png') ",
                   backgroundSize: "384px",
                   backgroundPositionX: "0px",
                   backgroundPositionY: "0px",
