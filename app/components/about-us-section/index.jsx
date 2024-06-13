@@ -1,28 +1,67 @@
 'use client';
 
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import { Montserrat } from 'next/font/google';
 
 const montserrat = Montserrat({
-    weight: '400',
-    subsets: ['latin'],
-})
+  weight: '400',
+  subsets: ['latin'],
+});
 
 function AboutUs() {
+  return (
+    <>
+      <div id="about-us-section">
+        <div className="w-full p-24 bg-gray-100 ">
+          <div className="w-[100%] bg-white py-5 px-5 rounded-md  transition-all duration-300 ">
+            <div className="flex flex-col">
+              <div className="flex flex-col items-start">
+                <div className="flex items-start tracking-tighter	">
+                  <h1 className=" lg:text-6xl md:text-4xl sm:text-2xl text-pretty uppercase  text-left text-slate-700 mb-2">
+                    ¿Quienes{' '}
+                  </h1>
+                  <h1 className=" pl-5 lg:text-6xl md:text-4xl sm:text-2xl text-pretty uppercase  text-left text-indigo-600 mb-2">
+                    {' '}
+                    somos?
+                  </h1>
+                </div>
 
-    return (
-        <>
-            <div id="about-us-section" className="w-full block py-10 bg-cyan-900 justify-center">
-                <h1 className="font-sans ceraprobold p-10 mb-2 text-5xl text-pretty uppercase leading-8 tracking-widest font-bold text-center text-white">Sobre PTGA</h1>
-                <p className={`${montserrat.className} object-contain font-sans px-40 md:text-[1.25rem] md:leading-normal lg:text-[2.25rem] lg:leading-loose text-white text-justify`}>
-                    Somos una cooperativa  especializada en asesoramiento, investigación, fabricación y servicios de instalación para el desarrollo de tecnología en telecomunicaciones.
-                    Contamos con más de una década de experiencia profesional en el campo, personal técnico especializado y la infraestructura necesaria para brindar servicios integrales en materia de comunicación audiovisual.
-                    Nuestra vasta experiencia profesional nos permite ofrecer un conjunto de soluciones diseñadas que se ajustan a cada proyecto. </p>
+                <p
+                  className={`${montserrat.className} md:text-[1rem] leading-normal lg:text-[1.3rem] text-slate-700  text-justify p-4`}
+                >
+                  Somos una{' '}
+                  <span className="text-indigo-600">
+                    cooperativa especializada
+                  </span>{' '}
+                  en asesoramiento, investigación, fabricación y servicios de
+                  instalación para el desarrollo de tecnología
+                  <span className="text-indigo-600">
+                    {' '}
+                    en telecomunicaciones
+                  </span>
+                  .<br></br> Contamos con más de{' '}
+                  <span className="text-amber-600">
+                    una década de experiencia profesional
+                  </span>{' '}
+                  en el campo, personal técnico especializado y la
+                  <span className="text-amber-600">
+                    {' '}
+                    infraestructura necesaria para brindar servicios integrales
+                  </span>{' '}
+                  en materia de comunicación audiovisual.<br></br> Nuestra vasta
+                  experiencia profesional nos permite ofrecer un conjunto de
+                  <span className="text-red-500">
+                    {' '}
+                    soluciones diseñadas que se ajustan a cada proyecto.
+                  </span>
+                </p>
+              </div>
             </div>
-
-        </>
-
-    )
-};
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
 
 export default AboutUs;
