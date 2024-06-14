@@ -28,8 +28,8 @@ export default function Home() {
       <HeroComponent />
       <AboutUs />
       <Services />
-      <ContactComponent />
       <Clients_Carousel data={carousel_items} />
+      <ContactComponent />
     </>
   );
 }

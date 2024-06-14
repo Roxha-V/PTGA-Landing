@@ -8,9 +8,9 @@ function Clients_Carousel({ data }) {
   return (
     <section id="clients">
       <div className="w-full h-full">
-        <div className="w-full h-48 bg-gray-900 [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
+        <div className="w-full  bg-gray-100">
           <div>
-            <h1 className="relative p-8 text-purple-900 text-center">
+            <h1 className="relative p-8 text-3xl font-extrabold text-black text-center">
               Confian en Nosotros
             </h1>
           </div>
@@ -22,9 +22,8 @@ function Clients_Carousel({ data }) {
                 delay: 3000, // tiempo entre transiciones
                 disableOnInteraction: true, //inact en interaccion
               }}
-              slidesPerView={3}
-              spaceBetween={1}
-              centeredSlides={true}
+              spaceBetween={0}
+              //centeredSlides={true}
               pagination={{
                 type: "bullets",
                 dynamicBullets: "true",
@@ -32,14 +31,37 @@ function Clients_Carousel({ data }) {
               }}
               modules={[Autoplay, Pagination]}
               className="mySwiper"
+              breakpoints={{
+                0: {
+                  slidesPerView: 1,
+                },
+                400: {
+                  slidesPerView: 2,
+                },
+                639: {
+                  slidesPerView: 2,
+                },
+                865: {
+                  slidesPerView: 3,
+                },
+                1000: {
+                  slidesPerView: 5,
+                },
+                1500: {
+                  slidesPerView: 6,
+                },
+                1700: {
+                  slidesPerView: 7,
+                },
+              }}
             >
               {data.map((item) => (
                 <SwiperSlide
                   key={item.key}
-                  className="carousel-item p-2 overflow-hidden relative
+                  className="carousel-item overflow-hidden relative
               "
                 >
-                  <h2 className="text-xl text-blue-50 p-10 decoration-sky-500  ">
+                  <h2 className="text-xl text-black text-center py-10 decoration-sky-500  ">
                     {item.name}
                   </h2>
                 </SwiperSlide>
