@@ -79,7 +79,7 @@ function NavbarComponent() {
 
         {/* aca va el contenido de la pagina entera*/}
 
-        <div className="drawer-side z-40">
+        <div className="drawer-side z-40 overflow-x-hidden">
           {" "}
           {/* aca arranca la parte del drawer que se muestra en mobile y pantallas chicas ocultando lo anterior */}
           <label
