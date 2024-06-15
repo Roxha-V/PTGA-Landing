@@ -18,8 +18,14 @@ const navbarItems = [
 function NavbarComponent() {
   const scrollToSection = (id) => {
     const idFollow = document.getElementById(id);
+    //Para cambiar el tamaño del offset modificar esta variable. Son px.
+    let offsetTop = document
+      .getElementById("navigation-bar")
+      .getBoundingClientRect().height; // este tamaño es relacionado al tamaño (altura) del navbar menu
+    let distanceFromViewport = idFollow.getBoundingClientRect().top;
+    let finalPosition = distanceFromViewport + window.scrollY - offsetTop;
     if (idFollow) {
-      idFollow.scrollIntoView({ behavior: "smooth" });
+      window.scrollTo({ behavior: "smooth", top: finalPosition });
     } else {
       console.log("no se encontro", id, "en el document");
     }
@@ -35,7 +41,11 @@ function NavbarComponent() {
         <div className="drawer-content flex flex-col">
           <div className={`w-full navbar bg-indigo-800 `}>
             <div className="flex-1 px-2 mx-2 ">
-              <a href="/">
+              <a
+                onClick={() => {
+                  window.scrollTo({ behavior: "smooth", top: 0 });
+                }}
+              >
                 <img
                   src="./logo-xl-ptga.svg"
                   alt="logo-PTGA"
