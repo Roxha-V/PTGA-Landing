@@ -79,11 +79,13 @@ const cardData = [
 function ServiceSection(params) {
   return (
     <div id="services">
-      <div className="w-full bg-gray-100">
-        <div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 mt-10 overflow-hidden bg-gray-100 p-8  lg:p-10 2xl:p-30 
-             lg:flex-row gap-10 md:flex-col sm:flex-col"
-        >
+      <div className="w-full p-8 md:p-6 lg:p-10 bg-gray-100">
+        <div>
+          <h1 className="relative text-3xl font-extrabold text-black text-center">
+            Servicios
+          </h1>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 mt-10 lg:flex-row gap-10 md:flex-col sm:flex-col">
           {cardData.map((item) => (
             <Card {...item} key={item.id} />
           ))}
