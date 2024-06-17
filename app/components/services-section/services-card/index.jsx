@@ -6,7 +6,7 @@ function Card({ id, title, img, bgColor, service_detail }) {
   return (
     <div
       id="touch-card"
-      className="group w-full relative cursor-pointer overflow-hidden bg-white pt-10 pb-8  ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto rounded-lg  px-6 sm:px-10"
+      className="group w-full relative cursor-pointer overflow-hidden bg-white pt-10 pb-8 ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-gray-500/60 sm:mx-auto rounded-lg  px-6 sm:px-10"
     >
       <span
         id="card-span"
