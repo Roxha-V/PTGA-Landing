@@ -79,9 +79,9 @@ const cardData = [
 function ServiceSection(params) {
   return (
     <div id="services">
-      <div className="w-full p-4 bg-gray-100">
+      <div className="w-full bg-gray-100">
         <div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 mt-10 overflow-hidden bg-gray-100 p-10 sm:py-8 lg:p-10 2xl:p-30 
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 mt-10 overflow-hidden bg-gray-100 p-8  lg:p-10 2xl:p-30 
              lg:flex-row gap-10 md:flex-col sm:flex-col"
         >
           {cardData.map((item) => (
