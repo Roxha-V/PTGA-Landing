@@ -57,7 +57,7 @@ const cardData = [
     title: "Mantenimiento de plantas trasmisoras FM",
     icon: "",
     img: "",
-    bgColor: "#A30DFC",
+    bgColor: "#5C0092",
     service_detail:
       "Nuestros técnicos realizan las tareas de mantenimiento de punta a punta: desde los equipos del estudio hasta la baliza de la torre, garantizando el buen funcionamiento de tu planta transmisora, realizando tareas como:  Cambio de antenas y enlaces. Mantenimiento de torres. Asesoría para la compra equipos de estudio y planta transmisora.    ",
     link: "?",
@@ -71,6 +71,16 @@ const cardData = [
     bgColor: "#ED0000",
     service_detail:
       "Nuestra misión es asesorar, reformar, re acondicionar instalaciones energéticas con el enfoque en ahorro y efectividad en el uso que se le de en cada establecimiento. Analizamos las demandas y las necesidades del cliente a fin de realizar el proyecto y buscar las oportunidades de ahorro en las tarifas de electricidad y gas. Nos manejamos en las áreas domiciliarias, comerciales e industriales.",
+    link: "?",
+  },
+  {
+    id: 4,
+    title: "Instalacion de Cámaras",
+    icon: "",
+    img: "",
+    bgColor: "#A30DFC",
+    service_detail:
+      "Nuestros técnicos realizan las tareas de mantenimiento de punta a punta: desde los equipos del estudio hasta la baliza de la torre, garantizando el buen funcionamiento de tu planta transmisora, realizando tareas como:  Cambio de antenas y enlaces. Mantenimiento de torres. Asesoría para la compra equipos de estudio y planta transmisora.    ",
     link: "?",
   },
   //#5C0092 violeta oscuro
