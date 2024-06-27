@@ -34,12 +34,15 @@ function NavbarComponent() {
   //función scrollToSection dentro del componente - función de flecha que acepta un parámetro id (id del elemento a donde se quiere ir)
 
   return (
-    <section id="navigation-bar" className="fixed top-0 z-40 w-full">
-      <div className="drawer drawer-end">
+    <section
+      id="navigation-bar"
+      className="fixed top-0 z-40 w-full backdrop-blur-sm	"
+    >
+      <div className="drawer drawer-end w-10/12	 mx-auto mt-4 mb-2">
         <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
 
         <div className="drawer-content flex flex-col">
-          <div className={`w-full navbar bg-indigo-800 `}>
+          <div className={`w-full navbar bg-indigo-600  rounded`}>
             <div className="flex-1 px-2 mx-2 ">
               <a
                 onClick={() => {
@@ -49,12 +52,12 @@ function NavbarComponent() {
                 <img
                   src="./logo-xl-ptga.svg"
                   alt="logo-PTGA"
-                  className="mx-2 w-44 h-28"
+                  className=" h-[9dvh] object-contain cursor-pointer"
                 ></img>
               </a>
             </div>
 
-            <div className="flex-none lg:hidden">
+            <div className="flex-none md:hidden">
               <label
                 htmlFor="my-drawer-3"
                 aria-label="open sidebar"
@@ -68,11 +71,11 @@ function NavbarComponent() {
               </label>
             </div>
 
-            <div className="flex-none hidden lg:block">
+            <div className="flex-none hidden md:block">
               <ul className="menu menu-horizontal">
                 {navbarItems.map((item, id) => {
                   return (
-                    <li key={item.id} className="navbar-item p-4">
+                    <li key={item.id} className="navbar-item ">
                       <a
                         className="sections text-white text-xl"
                         onClick={() => scrollToSection(item.id)}
@@ -97,10 +100,10 @@ function NavbarComponent() {
             aria-label="close sidebar"
             className="drawer-overlay bg-base-100 rounded-t-none"
           ></label>
-          <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
+          <ul className="menu  w-80 min-h-full bg-base-200 text-base-content">
             {navbarItems.map((item, index) => {
               return (
-                <li key={item.id} className="navbar-item p-4">
+                <li key={item.id} className="navbar-item m-4">
                   <a
                     className="border-2 hover:border-indigo-800"
                     onClick={(e) => scrollToSection(item.id)}
