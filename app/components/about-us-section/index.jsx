@@ -12,7 +12,7 @@ function AboutUs() {
   return (
     <>
       <div id="about-us-section">
-        <div className="w-full p-8 md:p-6 lg:p-10 bg-gray-100 ">
+        <div className="w-full p-8 md:p-6 lg:p-10  ">
           <div className="w-[100%] bg-white  pt-8 pl-8 rounded-md overflow-hidden">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 ">
               <div className="completo-texto flex flex-col items-start w-full align-middle">

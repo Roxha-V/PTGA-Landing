@@ -178,7 +178,7 @@ const cardData = [
 function ServiceSection(params) {
   return (
     <div id="services">
-      <div className="w-full p-8 md:p-6 lg:p-10 bg-gray-100">
+      <div className="w-full p-8 md:p-6 lg:p-10 ">
         <div>
           <h1 className="relative text-3xl font-extrabold text-black text-center">
             Servicios
