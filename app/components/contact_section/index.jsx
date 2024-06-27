@@ -5,6 +5,8 @@
 import React, { useEffect, useState } from "react";
 
 function ContactComponent() {
+  const contactNumber = process.env.NEXT_PUBLIC_CONTACT_NUMBER; //env variable de número de telefono
+
   const [formState, setFormState] = useState({
     name: "",
     message: "",
@@ -37,7 +39,9 @@ function ContactComponent() {
     // verificar si todos los campos están completos antes de proceder
     if (validacionCampos()) {
       window.open(
-        `https://wa.me/1122537953?text=${encodeURIComponent(fullMessage)}`,
+        `https://wa.me/${contactNumber}?text=${encodeURIComponent(
+          fullMessage
+        )}`,
         "_blank"
       );
     } else {
@@ -112,7 +116,7 @@ function ContactComponent() {
                         >
                           Consultar por whatsapp
                         </h1>
-                        <a href="whatsapp://send?phone=0000000000">
+                        <a href={`https://wa.me/${contactNumber}`}>
                           <svg
                             viewBox="0 0 32 32"
                             className="sm:w-12 sm:h-12 md:w-16 md:h-16 w-16 h-16 p-2 bg-green-600 fill-white rounded-full fixed bottom-4 right-4 z-10 shadow-md hover:drop-shadow-2xl"
