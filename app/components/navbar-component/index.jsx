@@ -1,7 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
-import { useState } from "react";
+import React, { useRef } from "react";
 
 const navbarItems = [
   { id: "about-us-section", key: "Sobre PTGA" },
@@ -16,9 +15,10 @@ const navbarItems = [
 //  que se está mapeando (map) y no dentro del componente que se está renderizando.
 
 function NavbarComponent() {
+  const drawerToggleRef = useRef(null);
+
   const scrollToSection = (id) => {
     const idFollow = document.getElementById(id);
-    //Para cambiar el tamaño del offset modificar esta variable. Son px.
     let offsetTop = document
       .getElementById("navigation-bar")
       .getBoundingClientRect().height; // este tamaño es relacionado al tamaño (altura) del navbar menu
@@ -31,15 +31,20 @@ function NavbarComponent() {
     }
   };
 
-  //función scrollToSection dentro del componente - función de flecha que acepta un parámetro id (id del elemento a donde se quiere ir)
+    //función scrollToSection dentro del componente - función de flecha que acepta un parámetro id (id del elemento a donde se quiere ir)
+
+  const scrollAndClose = (id) => {
+    scrollToSection(id);
+    // Cerrar el drawer al hacer clic en un enlace
+    if (drawerToggleRef.current) {
+      drawerToggleRef.current.checked = false;
+    }
+  };
 
   return (
-    <section
-      id="navigation-bar"
-      className="fixed top-0 z-40 w-full backdrop-blur-sm	"
-    >
-      <div className="drawer drawer-end w-10/12	 mx-auto mt-4 mb-2">
-        <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
+    <section id="navigation-bar" className="fixed top-0 z-40 w-full backdrop-blur-sm">
+      <div className="drawer drawer-end w-10/12 mx-auto mt-4 mb-2">
+        <input id="my-drawer-3" type="checkbox" className="drawer-toggle" ref={drawerToggleRef} />
 
         <div className="drawer-content flex flex-col">
           <div className={`w-full navbar bg-indigo-600  rounded`}>
@@ -73,7 +78,7 @@ function NavbarComponent() {
 
             <div className="flex-none hidden md:block">
               <ul className="menu menu-horizontal">
-                {navbarItems.map((item, id) => {
+              {navbarItems.map((item, id) => {
                   return (
                     <li key={item.id} className="navbar-item ">
                       <a
@@ -93,20 +98,20 @@ function NavbarComponent() {
         {/* aca va el contenido de la pagina entera*/}
 
         <div className="drawer-side z-40 overflow-x-hidden">
-          {" "}
           {/* aca arranca la parte del drawer que se muestra en mobile y pantallas chicas ocultando lo anterior */}
           <label
             htmlFor="my-drawer-3"
             aria-label="close sidebar"
             className="drawer-overlay bg-base-100 rounded-t-none"
           ></label>
+          
           <ul className="menu  w-80 min-h-full bg-base-200 text-base-content">
             {navbarItems.map((item, index) => {
               return (
                 <li key={item.id} className="navbar-item m-4">
                   <a
                     className="border-2 hover:border-indigo-800"
-                    onClick={(e) => scrollToSection(item.id)}
+                    onClick={(e) => scrollAndClose(item.id)}
                   >
                     {item.key}
                   </a>
