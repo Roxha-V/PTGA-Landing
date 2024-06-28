@@ -8,7 +8,7 @@ function Clients_Carousel({ data }) {
   return (
     <section id="clients">
       <div className="w-full h-full">
-        <div className="w-full  bg-gray-100">
+        <div className="w-full  ">
           <div>
             <h1 className="relative p-8 text-3xl font-extrabold text-black text-center">
               Confian en Nosotros

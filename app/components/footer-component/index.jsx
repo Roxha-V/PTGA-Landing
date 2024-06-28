@@ -60,7 +60,7 @@ function Footer() {
   return (
     <footer
       id="footer-section"
-      className="w-full h-1/2 p-10 bg-gradient-to-b from-gray-100 via-gray-200 to-gray-400 text-neutral-content spa"
+      className="w-full h-1/2 p-10  text-neutral-content spa"
     >
       <div className="flex flex-col lg:flex-row lg:justify-evenly items-center justify-center align-middle mb-5 text-2xl font-semibold text-gray-900">
         <div className="block text-sm text-center text-gray-500">
