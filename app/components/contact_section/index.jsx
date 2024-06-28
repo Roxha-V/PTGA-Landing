@@ -89,10 +89,7 @@ function ContactComponent() {
                       placeholder="¿Cuál es tu nombre ?"
                     />
 
-                    <label
-                      className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                      for="grid-first-name"
-                    >
+                    <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                       Mensaje <span className="text-red-500">*</span>
                     </label>
                     <textarea

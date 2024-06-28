@@ -1,6 +1,4 @@
-"use client";
-
-import React, { useState } from "react";
+import React from "react";
 import { Montserrat } from "next/font/google";
 
 const montserrat = Montserrat({

@@ -1,67 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@font-face {
-  font-family: "CeraProB";
-  src: url("/fonts/CeraPro-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "CeraProM";
-  src: url("/fonts/CeraPro-Medium.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  @layer utilities {
-    .text-balance {
-      text-wrap: balance;
-    }
-  }
-  background: rgb(243 244 246 / 1);
-
-  *,
-  *::before,
-  *::after {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-
-  .ceraProM {
-    font-family: "CeraProM", sans-serif;
-  }
-
-  .ceraProB {
-    font-family: "CeraProB", sans-serif;
-  }
-
-  .montserratM {
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-  }
-}
-
-:root {
-  --hover: bgColor;
+  background: whitesmoke;
 }
