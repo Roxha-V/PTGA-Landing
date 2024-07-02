@@ -1,35 +1,33 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import { Autoplay, Pagination } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 function Clients_Carousel({ data }) {
   return (
-    <section id="clients">
-      <div className="w-full h-full">
-        <div className="w-full  ">
+    <section id="clients" className="p-10">
+      <div className="w-full h-full bg-white drop-shadow-md pt-8  rounded-md overflow-hidden">
+        <div className="w-full ">
           <div>
-            <h1 className="relative p-8 text-3xl font-extrabold text-black text-center">
-              Confian en Nosotros
+            <h1 className="relative p-8 mb-2 ml-4 leading-8 text-4xl font-extrabold  text-left tracking-normal  ">
+              <span className="underline decoration-indigo-600/40">
+                Confian
+              </span>
+              {""} en Nosotros
             </h1>
           </div>
-          <div>
+          <div class="relative origin-center mySwiper">
             <Swiper
+              freeMode={true}
               loop={true}
-              speed={2000} // ( ej 2000 ms = 2 segundos)
+              speed={1600}
               autoplay={{
-                delay: 3000, // tiempo entre transiciones
-                disableOnInteraction: true, //inact en interaccion
+                delay: 600,
+                pauseOnMouseEnter: true,
               }}
-              spaceBetween={0}
-              //centeredSlides={true}
-              pagination={{
-                type: "bullets",
-                dynamicBullets: "true",
-                dynamicMainBullets: "3",
-              }}
-              modules={[Autoplay, Pagination]}
+              spaceBetween={10}
+              modules={[Autoplay]}
               className="mySwiper"
               breakpoints={{
                 0: {
@@ -44,27 +42,22 @@ function Clients_Carousel({ data }) {
                 865: {
                   slidesPerView: 3,
                 },
-                1000: {
-                  slidesPerView: 5,
-                },
-                1500: {
-                  slidesPerView: 6,
-                },
                 1700: {
-                  slidesPerView: 7,
+                  slidesPerView: 4,
                 },
               }}
             >
               {data.map((item) => (
-                <SwiperSlide
-                  key={item.key}
-                  className="carousel-item overflow-hidden relative
-              "
-                >
-                  <h2 className="text-xl text-black text-center py-10 decoration-sky-500  ">
-                    {item.name}
-                  </h2>
-                </SwiperSlide>
+                <div class="relative flex-shrink-0">
+                  <SwiperSlide
+                    key={item.key}
+                    className="carousel-item overflow-hidden relative "
+                  >
+                    <h2 class="text-xl text-indigo-600 text-center px-14 py-10 font-normal leading-8 mb-4">
+                      {item.name}
+                    </h2>
+                  </SwiperSlide>
+                </div>
               ))}
             </Swiper>
           </div>
