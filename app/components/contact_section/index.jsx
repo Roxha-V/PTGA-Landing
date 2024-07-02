@@ -73,8 +73,8 @@ function ContactComponent() {
                 <hr className="mt-3 border-gray-300"></hr>
               </div>
               <div className="divide-y divide-gray-200">
-                <form method="post" onSubmit={handleSubmit}>
-                  <div className="pt-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7 -mb-8">
+                <div className="pt-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7 -mb-8">
+                  <form method="post" onSubmit={handleSubmit}>
                     <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                       Nombre <span className="text-red-500">*</span>
                     </label>
@@ -134,8 +134,8 @@ function ContactComponent() {
                         📋 Tu Cotización en 24 hs
                       </p>
                     </div>
-                  </div>
-                </form>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
