@@ -58,38 +58,41 @@ const socialMediaIcons = {
 
 function Footer() {
   return (
-    <footer
-      id="footer-section"
-      className="w-full h-1/2 p-10  text-neutral-content spa"
-    >
-      <div className="flex flex-col lg:flex-row lg:justify-evenly items-center justify-center align-middle mb-5 text-2xl font-semibold text-gray-900">
-        <div className="block text-sm text-center text-gray-500">
-          <div className="text-center pb-12">
-            <h6 className="footer-title p-4 py-6 drop-shadow-sm">
-              Contactanos
-            </h6>
-            <div className="flex flex-row justify-center gap-10">
-              {socialMediaObjets &&
-                socialMediaObjets.map((iconItem, index) => {
-                  return (
-                    <button
-                      key={iconItem.id}
-                      type="button"
-                      className={`inline-block group rounded px-6 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md hover:shadow-lg ${iconItem.hoverColor} transition duration-200 ease-in-out`}
-                    >
-                      <a href={iconItem.url}>
-                        {socialMediaIcons[iconItem.type]}
-                      </a>{" "}
-                    </button>
-                  );
-                })}
+    <section aria-label="Footer section">
+      <footer
+        id="footer-section"
+        className="w-full h-1/2 p-10  text-neutral-content spa"
+      >
+        <div className="flex flex-col lg:flex-row lg:justify-evenly items-center justify-center align-middle mb-5 text-2xl font-semibold text-gray-900">
+          <div className="block text-sm text-center text-gray-500">
+            <div className="text-center pb-12">
+              <h6 className="footer-title p-4 py-6 drop-shadow-sm">
+                Contactanos
+              </h6>
+              <div className="flex flex-row justify-center gap-10">
+                {socialMediaObjets &&
+                  socialMediaObjets.map((iconItem, index) => {
+                    return (
+                      <button
+                        aria-label="Botón redireccion a redes sociales"
+                        key={iconItem.id}
+                        type="button"
+                        className={`inline-block group rounded px-6 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md hover:shadow-lg ${iconItem.hoverColor} transition duration-200 ease-in-out`}
+                      >
+                        <a href={iconItem.url}>
+                          {socialMediaIcons[iconItem.type]}
+                        </a>{" "}
+                      </button>
+                    );
+                  })}
+              </div>
             </div>
+            © 2024 - Producción Tecnológica, Gráfica y Audiovisual LTDA.
+            Desarollado con &#x2665;.
           </div>
-          © 2024 - Producción Tecnológica, Gráfica y Audiovisual LTDA.
-          Desarollado con &#x2665;.
         </div>
-      </div>
-    </footer>
+      </footer>
+    </section>
   );
 }
 

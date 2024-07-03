@@ -1,5 +1,3 @@
-//este es un test
-
 "use client";
 
 import React, { useEffect, useState } from "react";
@@ -51,6 +49,7 @@ function ContactComponent() {
 
   return (
     <section
+      aria-label="Contact section "
       id="contact"
       className="min-h-screen  py-6 flex flex-col justify-center sm:py-12"
     >
@@ -146,10 +145,3 @@ function ContactComponent() {
 }
 
 export default ContactComponent;
-// const { name, value } = event.target;
-
-// if (!formState.name || !formState.message)
-//   // aca lo que hace OR es comparar ambos valores y si uno de los 2 es verdadero (o vacioa)
-//   //significa que se va a cumple el if, y retorna el prompt. tmb se usa not (!) para
-//   // evolver el valor contrario del booleano (valor.
-//   return prompt("No olvides completar ambos campos!");

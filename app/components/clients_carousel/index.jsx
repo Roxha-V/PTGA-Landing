@@ -6,7 +6,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 function Clients_Carousel({ data }) {
   return (
-    <section id="clients" className="p-10">
+    <section
+      aria-label="Clients carousel section"
+      id="clients"
+      className="p-10"
+    >
       <div className="w-full h-full bg-white drop-shadow-md pt-8  rounded-md overflow-hidden">
         <div className="w-full ">
           <div>

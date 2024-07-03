@@ -7,6 +7,15 @@ import "swiper/css/autoplay";
 import "swiper/css/navigation";
 import FloatingBtn from "./components/Floating-btn-component/FloatingBtn";
 
+export const metadata = {
+  title: 'PTGA',
+  description: 'Cooperativa especializada en asesoramiento, investigación, fabricación y serviciosde instalación para el desarrollo de tecnología en telecomunicaciones',
+  icons: {
+    icon: '/icon.ico',
+  }
+};
+
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
@@ -15,7 +24,7 @@ export default function RootLayout({ children }) {
         <main>
           {children}
         </main>
-        <FloatingBtn/>
+        <FloatingBtn />
         <Footer></Footer>
       </body>
     </html>
