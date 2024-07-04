@@ -1,10 +1,4 @@
 import React from "react";
-import { Montserrat } from "next/font/google";
-
-const montserrat = Montserrat({
-  weight: "400",
-  subsets: ["latin"],
-});
 
 function AboutUs() {
   return (
@@ -24,7 +18,7 @@ function AboutUs() {
                     </h2>
                   </div>
                   <p
-                    className={`${montserrat.className} text-[1.4rem] leading-normal lg:text-[1.3rem] text-slate-700  text-left p-4 break-words `}
+                    className={` text-[1.4rem] leading-normal lg:text-[1.3rem] text-slate-700  text-left p-4 break-words `}
                   >
                     <img
                       className="rounded-full  bg-gray-100 p-0 md:m-2 lg:m-0 lg:bg-white lg:rounded-none  hidden md:float-right md:flex lg:hidden md:h-[45svw]"
@@ -48,10 +42,12 @@ function AboutUs() {
                     en el campo, personal técnico especializado y la
                     <span className="text-amber-600 font-semibold">
                       {" "}
-                    infraestructura necesaria para brindar servicios integrales
+                      infraestructura necesaria para brindar servicios
+                      integrales
                     </span>{" "}
-                  en materia de comunicación audiovisual.<br></br> Nuestra vasta
-                  experiencia profesional nos permite ofrecer un conjunto de
+                    en materia de comunicación audiovisual.<br></br> Nuestra
+                    vasta experiencia profesional nos permite ofrecer un
+                    conjunto de
                     <span className="text-red-500 font-semibold">
                       {" "}
                       soluciones diseñadas que se ajustan a cada proyecto.

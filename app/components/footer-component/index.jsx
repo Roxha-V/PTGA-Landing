@@ -88,7 +88,7 @@ function Footer() {
               </div>
             </div>
             © 2024 - Producción Tecnológica, Gráfica y Audiovisual LTDA.
-            Desarollado con &#x2665;.
+            Desarollado con 🧉.
           </div>
         </div>
       </footer>

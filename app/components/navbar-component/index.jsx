@@ -47,11 +47,16 @@ function NavbarComponent() {
       id="navigation-bar"
       className="fixed top-0 z-40 w-full backdrop-blur-sm"
     >
-      <div className="drawer drawer-end w-10/12	 mx-auto mt-4 mb-2">
-        <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
+      <div className="drawer drawer-end w-10/12 mx-auto mt-4 mb-2">
+        <input
+          id="my-drawer-3"
+          type="checkbox"
+          className="drawer-toggle"
+          ref={drawerToggleRef}
+        />
 
         <div className="drawer-content flex flex-col">
-          <div className={`w-full navbar bg-indigo-600  rounded`}>
+          <div className="w-full navbar bg-indigo-600 rounded ">
             <div className="flex-1 px-2 mx-2 ">
               <a
                 role="button"

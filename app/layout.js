@@ -15,11 +15,17 @@ export const metadata = {
     icon: '/icon.ico',
   }
 };
+import { Montserrat } from "next/font/google";
+
+const montserrat = Montserrat({
+  weight: "400",
+  subsets: ["latin"],
+});
 
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={montserrat.className}>
       <body>
         <NavbarComponent />
         <main>
