@@ -59,7 +59,7 @@ function ContactComponent() {
           <div className="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
             <div className="max-w-md mx-auto">
               <div>
-                <h1 className="text-3xl font-extrabold text-black">
+                <h1 className=" text-2xl md:text-4xl lg:text-5xl  text-pretty uppercase p-2 relative font-extrabold text-slate-700 text-left   ">
                   Hablemos...
                 </h1>
                 <p className="mt-3 text-rigth">
@@ -132,5 +132,4 @@ function ContactComponent() {
     </section>
   );
 }
-
 export default ContactComponent;

@@ -21,7 +21,7 @@ function Card({ id, title, img, bgColor, service_detail }) {
           {img}
         </span>
         <div className="pt-5 text-base font-semibold leading-7">
-          <p>
+          <p className=" mb-2 ml-4 lg:text-3xl md:text-2xl text-xl text-pretty uppercase  relative font-extrabold text-slate-700">
             <a
               id="card-title"
               className={`text-${bgColor} transition-all duration-300 group-hover:text-white/90`}

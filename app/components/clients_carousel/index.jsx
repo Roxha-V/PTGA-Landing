@@ -14,10 +14,8 @@ function Clients_Carousel({ data }) {
       <div className="w-full h-full bg-white drop-shadow-md pt-8  rounded-md overflow-hidden">
         <div className="w-full ">
           <div>
-            <h1 className="relative p-8 mb-2 ml-4 leading-8 text-4xl font-extrabold  text-left tracking-normal  ">
-              <span className="underline decoration-indigo-600/40">
-                Confian
-              </span>
+            <h1 className=" mb-2  lg:text-5xl md:text-4xl text-3xl text-pretty uppercase p-4 pl-8 relative font-extrabold text-slate-700 text-left   ">
+              Confian
               {""} en Nosotros
             </h1>
           </div>
@@ -57,7 +55,7 @@ function Clients_Carousel({ data }) {
                     key={item.id}
                     className="carousel-item overflow-hidden relative "
                   >
-                    <h2 className="text-xl text-indigo-600 text-center px-14 py-10 font-normal leading-8 mb-4">
+                    <h2 class="lg:text-3xl md:text-2xl text-xl text-pretty  text-indigo-600 text-center px-20 mt-4 py-10 font-normal leading-8 mb-4">
                       {item.name}
                     </h2>
                   </SwiperSlide>

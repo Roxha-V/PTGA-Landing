@@ -180,7 +180,7 @@ function ServiceSection(params) {
     <div aria-label="Services section" id="services">
       <div className="w-full p-8 md:p-6 lg:p-10 ">
         <div>
-          <h1 className="relative text-3xl font-extrabold text-black text-center">
+          <h1 className=" text-2xl md:text-4xl lg:text-6xl   text-pretty uppercase p-8 relative font-extrabold text-slate-700 text-left stroke-black   ">
             Servicios
           </h1>
         </div>
