@@ -21,7 +21,7 @@ function Clients_Carousel({ data }) {
               {""} en Nosotros
             </h1>
           </div>
-          <div class="relative origin-center mySwiper">
+          <div className="relative origin-center mySwiper">
             <Swiper
               freeMode={true}
               loop={true}
@@ -52,12 +52,12 @@ function Clients_Carousel({ data }) {
               }}
             >
               {data.map((item) => (
-                <div class="relative flex-shrink-0">
+                <div className="relative flex-shrink-0">
                   <SwiperSlide
-                    key={item.key}
+                    key={item.id}
                     className="carousel-item overflow-hidden relative "
                   >
-                    <h2 class="text-xl text-indigo-600 text-center px-14 py-10 font-normal leading-8 mb-4">
+                    <h2 className="text-xl text-indigo-600 text-center px-14 py-10 font-normal leading-8 mb-4">
                       {item.name}
                     </h2>
                   </SwiperSlide>

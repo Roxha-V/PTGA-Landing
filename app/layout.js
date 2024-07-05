@@ -6,6 +6,7 @@ import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import "swiper/css/navigation";
 import FloatingBtn from "./components/Floating-btn-component/FloatingBtn";
+import FloatingMktBtn from "./components/Floating-mkt-component/FloatingMktBtn";
 
 export const metadata = {
   title: 'PTGA',
@@ -25,6 +26,7 @@ export default function RootLayout({ children }) {
           {children}
         </main>
         <FloatingBtn />
+        <FloatingMktBtn />
         <Footer></Footer>
       </body>
     </html>

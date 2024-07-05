@@ -8,7 +8,7 @@ import Clients_Carousel from "./components/clients_carousel";
 
 const carousel_items = [
   { key: "cliente-1", id: "0", name: "Glew Net" },
-  { key: "cliente-2", id: "|", name: "Trialcom Sistemas" },
+  { key: "cliente-2", id: "1", name: "Trialcom Sistemas" },
   { key: "cliente-3", id: "2", name: "Ministerio de Educación" },
   { key: "cliente-4", id: "3", name: "UNAHUR" },
   { key: "cliente-5", id: "4", name: "Universidad Nacional de Moreno" },
