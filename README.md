@@ -72,17 +72,19 @@ Next.js soporta el uso de archivos `.env` para manejar variables de entorno. Est
 1. **Crear un archivo `.env.local`**:
 
    Crear un archivo llamado `.env.local` en la raíz del proyecto y luego agregar este archivo a tu `.gitignore` para que no se suba a tu repositorio.
-   
+
    Puedes utilizar el env.example como guia.
 
 2. **Definir las variables de entorno**:
 
    Dentro de `.env.local`, define tus variables de entorno. Recuerda que en el caso de Next, las variables que necesitas usar en el cliente (navegador) deben comenzar con el prefijo NEXT_PUBLIC_*
 
-   Por ejemplo:
+   Por ejemplo, en este proyecto se encuentran las siguiente variables de entorno:
 
    ```
    NEXT_PUBLIC_CONTACT_NUMBER=1234567890
+   NEXT_PUBLIC_go_to_external=https://www.mercadolibre.com.ar/perfil/COOPERATIVADETRABAJOPTGA
+
    ```
 
 ## Contribuciones 🤝
