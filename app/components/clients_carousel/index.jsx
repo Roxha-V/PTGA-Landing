@@ -1,0 +1,72 @@
+"use client";
+
+import React, { useEffect, useRef, useState } from "react";
+import { Autoplay } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+function Clients_Carousel({ data }) {
+  return (
+    <section
+      aria-label="Clients carousel section"
+      id="clients"
+      className="p-10"
+    >
+      <div className="w-full h-full bg-white drop-shadow-md pt-8  rounded-md overflow-hidden">
+        <div className="w-full ">
+          <div>
+            <h1 className=" mb-2  lg:text-5xl md:text-4xl text-3xl text-pretty uppercase p-4 pl-8 relative font-extrabold text-slate-700 text-left   ">
+              Confian
+              {""} en Nosotros
+            </h1>
+          </div>
+          <div className="relative origin-center mySwiper">
+            <Swiper
+              freeMode={true}
+              loop={true}
+              speed={1600}
+              autoplay={{
+                delay: 600,
+                pauseOnMouseEnter: true,
+              }}
+              spaceBetween={10}
+              modules={[Autoplay]}
+              className="mySwiper"
+              breakpoints={{
+                0: {
+                  slidesPerView: 1,
+                },
+                400: {
+                  slidesPerView: 2,
+                },
+                639: {
+                  slidesPerView: 2,
+                },
+                865: {
+                  slidesPerView: 3,
+                },
+                1700: {
+                  slidesPerView: 4,
+                },
+              }}
+            >
+              {data.map((item) => (
+                <div className="relative flex-shrink-0">
+                  <SwiperSlide
+                    key={item.id}
+                    className="carousel-item overflow-hidden relative "
+                  >
+                    <h2 class="lg:text-3xl md:text-2xl text-xl text-pretty  text-indigo-600 text-center px-20 mt-4 py-10 font-normal leading-8 mb-4">
+                      {item.name}
+                    </h2>
+                  </SwiperSlide>
+                </div>
+              ))}
+            </Swiper>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default Clients_Carousel;

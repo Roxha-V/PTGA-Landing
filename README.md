@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# **Proyecto PTGA - Landing**
 
-## Getting Started
+## Español 🇦🇷
 
-First, run the development server:
+## Landing Page para Cooperativa PTGA - Servicios de instalación en telecomunicaciones y electricidad. ⚡ 📻
+
+Este proyecto consiste en la creacion de una landing page diseñado específicamente para la cooperativa PTGA , la cual provee asesoramiento, investigación, fabricación y servicios de instalación en telecomunicaciones y electricidad.
+EL mismo utiliza tecnologías modernas para que agilizaron el proceso de desarrollo y asi, proporciona una experiencia fluida tanto para los desarrolladores como para los usuarios finales.
+
+## Requisitos de Instalación 🛠️
+
+Para ejecutar este proyecto localmente, asegúrate de tener instalados los siguientes requisitos:
+
+- **Node.js**: Se requiere Node.js en tu sistema. Puedes descargarlo e instalarlo desde [nodejs.org](https://nodejs.org).
+- **Next.js**: Este proyecto utiliza Next.js como framework de desarrollo web. A continuacion dejare información sobre cómo instalar y configurar el mismo, y usar variables de entorno con el.
+
+Puedes instalarlo globalmente usando npm:
+
+```bash
+npm install -g next
+
+```
+
+**React.js**: Next.js utiliza React.js como biblioteca para construir interfaces de usuario. No necesitas instalar React.js por separado, ya que viene incluido con Next.js.
+
+**Tailwind CSS**:Utilizamos Tailwind CSS para estilizar nuestras aplicaciones. Puedes instalarlo ejecutando:
+
+```bash
+npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
+```
+
+## Instrucciones de Instalación 🚀
+
+Sigue estos pasos para configurar y ejecutar el proyecto localmente.
+
+1- Clona este repositorio en tu máquina local:
+
+```bash
+git clone https://github.com/tu-usuario/tu-proyecto.git
+```
+
+2- Navega al directorio del proyecto:
+
+```bash
+cd tu-proyecto
+```
+
+3- Instala las dependencias del proyecto usando npm:
+
+```bash
+npm install
+```
+
+4- Inicia el servidor de desarrollo:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Esto iniciará el servidor de desarrollo en _http://localhost:3000._
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Variables de Entorno
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Las variables de entorno son una forma de configurar la aplicación sin valores estaticos en el código. NOs ayuda a manejar configuraciones que pueden variar en diferentes entornos, como claves de API, URLs, y otros datos sensibles.
 
-## Learn More
+### Configuración de Variables de Entorno en Next.js
 
-To learn more about Next.js, take a look at the following resources:
+Next.js soporta el uso de archivos `.env` para manejar variables de entorno. Estos archivos se crean en la raíz del proyecto.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#### Pasos para configurar variables de entorno:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. **Crear un archivo `.env.local`**:
 
-## Deploy on Vercel
+   Crear un archivo llamado `.env.local` en la raíz del proyecto y luego agregar este archivo a tu `.gitignore` para que no se suba a tu repositorio.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   Puedes utilizar el env.example como guia.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+2. **Definir las variables de entorno**:
+
+   Dentro de `.env.local`, define tus variables de entorno. Recuerda que en el caso de Next, las variables que necesitas usar en el cliente (navegador) deben comenzar con el prefijo NEXT_PUBLIC_*
+
+   Por ejemplo, en este proyecto se encuentran las siguiente variables de entorno:
+
+   ```
+   NEXT_PUBLIC_CONTACT_NUMBER=1234567890
+   NEXT_PUBLIC_go_to_external=https://www.mercadolibre.com.ar/perfil/COOPERATIVADETRABAJOPTGA
+
+   ```
+
+## Contribuciones 🤝
+
+Las contribuciones son bienvenidas y apreciada. Si tienes alguna idea, duda o problema, no dudes en abrir un issue o enviar un pull request. Tu participación ayuda a mejorar este proyecto para todes. ❤️
